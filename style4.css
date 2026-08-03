@@ -445,6 +445,7 @@ div:has(> .octadesk__custom-form__label):nth-of-type(9)::before {
 .octadesk__custom-form__container label,
 .octadesk__custom-form__attachment,
 .octadesk__custom-form__file-upload,
+.upload-area-component__description,
 .octadesk-app {
     color: #ffffff !important;
 }
