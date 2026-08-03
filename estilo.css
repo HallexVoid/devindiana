@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
-/* Transparência no documento pai do Iframe para que o fundo da página vaze pelo Glassmorphism */
-body, html {
+/* Forçando a transparência em TODOS os possíveis "fundos" que o Octadesk coloca por padrão */
+body, html, #root, #app, .octadesk-app, main, .container-fluid, .container, .App {
+    background: transparent !important;
     background-color: transparent !important;
 }
 
@@ -10,36 +11,32 @@ body, html {
     font-family: 'Outfit', sans-serif;
     max-width: 800px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.45); /* Branco translúcido */
-    backdrop-filter: blur(24px); /* Desfoque de vidro */
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.6); /* Borda difusa brilhante */
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08); /* Sombra elegante */
-    border-radius: 24px;
-    padding: 40px;
+    background: rgba(255, 255, 255, 0.45) !important; /* Branco translúcido */
+    backdrop-filter: blur(24px) !important; /* Desfoque de vidro */
+    -webkit-backdrop-filter: blur(24px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important; 
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+    border-radius: 24px !important;
+    padding: 40px !important;
     color: #102a43;
     box-sizing: border-box;
 }
 
 /* Labels e Textos (Corrigindo o CAPS LOCK) */
-.octadesk__custom-form__label, label.octadesk__custom-form__label {
+.octadesk__custom-form__label, label.octadesk__custom-form__label,
+.octadesk__custom-form__label span, label.octadesk__custom-form__label span {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 10px;
     color: #243b53;
     display: block;
-    text-transform: lowercase !important; /* Força tudo pra minúsculo primeiro... */
+    text-transform: capitalize !important; /* Força Primeira Letra de Cada Palavra Maiúscula */
     letter-spacing: 0.3px;
-}
-
-/* ... e depois coloca a primeira letra maiúscula (resolve o Caps Lock) */
-.octadesk__custom-form__label::first-letter, label.octadesk__custom-form__label::first-letter {
-    text-transform: uppercase !important;
 }
 
 /* Ocultar asterisco vermelho e colorir marcação sutilmente */
 .octadesk__custom-form__label__required {
-    color: #e74c3c;
+    color: #e74c3c !important;
     margin-left: 2px;
     opacity: 0.8;
 }
@@ -84,70 +81,36 @@ textarea.octadesk__custom-form__field:focus {
     outline: none;
     border-color: #1863dc;
     background-color: #ffffff;
-    /* Focus ring mais sutil e agradável */
     box-shadow: 0 0 0 4px rgba(24, 99, 220, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.02);
-}
-
-/* Estado de Erro */
-.has-error .octadesk__custom-form__field, 
-.has-error input.octadesk__custom-form__field {
-    border-color: #e74c3c;
-    background-color: #fffafa;
-    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.15);
 }
 
 /* Botão Submit Premium (Estilo Pill com Gradiente) */
 .octadesk__custom-form__submit, 
 button.octadesk__custom-form__submit {
-    background: linear-gradient(135deg, #1863dc 0%, #0c429e 100%);
-    color: #ffffff;
+    background: linear-gradient(135deg, #1863dc 0%, #0c429e 100%) !important;
+    color: #ffffff !important;
     border: none;
-    border-radius: 99px; /* Pill shape */
-    padding: 16px 32px;
-    font-size: 16px;
-    font-weight: 600;
+    border-radius: 99px !important; /* Pill shape */
+    padding: 16px 32px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
     letter-spacing: 0.5px;
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
     margin-top: 24px;
-    box-shadow: 0 8px 20px rgba(24, 99, 220, 0.3);
+    box-shadow: 0 8px 20px rgba(24, 99, 220, 0.3) !important;
 }
 
 .octadesk__custom-form__submit:hover, 
 button.octadesk__custom-form__submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(24, 99, 220, 0.4);
-    background: linear-gradient(135deg, #1f72f2 0%, #1153c4 100%);
+    box-shadow: 0 12px 24px rgba(24, 99, 220, 0.4) !important;
+    background: linear-gradient(135deg, #1f72f2 0%, #1153c4 100%) !important;
 }
 
 .octadesk__custom-form__submit:active, 
 button.octadesk__custom-form__submit:active {
     transform: translateY(1px);
-    box-shadow: 0 4px 12px rgba(24, 99, 220, 0.2);
-}
-
-/* Alertas modernizados (Com efeito Glassmorphism suave) */
-.octadesk__custom-form__alert {
-    padding: 16px 20px;
-    border-radius: 16px;
-    margin-bottom: 24px;
-    font-weight: 500;
-    font-size: 15px;
-    backdrop-filter: blur(10px);
-}
-.octadesk__custom-form__alert--success {
-    background-color: rgba(212, 237, 218, 0.8);
-    color: #155724;
-    border: 1px solid rgba(195, 230, 203, 0.6);
-}
-.octadesk__custom-form__alert--warning {
-    background-color: rgba(255, 243, 205, 0.8);
-    color: #856404;
-    border: 1px solid rgba(255, 238, 186, 0.6);
-}
-.octadesk__custom-form__alert--danger, .octadesk__custom-form__message--error {
-    background-color: rgba(248, 215, 218, 0.8);
-    color: #721c24;
-    border: 1px solid rgba(245, 198, 203, 0.6);
+    box-shadow: 0 4px 12px rgba(24, 99, 220, 0.2) !important;
 }
