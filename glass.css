@@ -6,6 +6,22 @@ body, html, #root, #app, .octadesk-app, main, .container-fluid, .container, .App
     background-color: transparent !important;
 }
 
+/* Customizando a barra de rolagem (Scrollbar) para tirar a barra branca feia do Windows */
+::-webkit-scrollbar {
+    width: 8px !important;
+    background: transparent !important;
+}
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 10px !important;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5) !important;
+}
+
 /* Glassmorphism Premium no Form Container */
 .octadesk__custom-form__container {
     font-family: 'Outfit', sans-serif !important;
