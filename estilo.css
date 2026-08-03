@@ -1,116 +1,173 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
-/* Forçando a transparência em TODOS os possíveis "fundos" que o Octadesk coloca por padrão */
-body, html, #root, #app, .octadesk-app, main, .container-fluid, .container, .App {
+/* Forçando a transparência ABSOLUTA nos fundos que o Octadesk cria */
+body, html, #root, #app, .octadesk-app, main, .container-fluid, .container, .App, div[data-reactroot] {
     background: transparent !important;
     background-color: transparent !important;
 }
 
-/* Container Principal com Glassmorphism Moderno */
+/* Glassmorphism Premium no Form Container */
 .octadesk__custom-form__container {
-    font-family: 'Outfit', sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.45) !important; /* Branco translúcido */
-    backdrop-filter: blur(24px) !important; /* Desfoque de vidro */
-    -webkit-backdrop-filter: blur(24px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.6) !important; 
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
-    border-radius: 24px !important;
+    font-family: 'Outfit', sans-serif !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    /* Reduzindo a opacidade do branco para que o vidro deixe vazar a cor do fundo da página */
+    background: rgba(255, 255, 255, 0.25) !important;
+    /* Aumentando o desfoque consideravelmente */
+    backdrop-filter: blur(36px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(36px) saturate(180%) !important;
+    /* Borda macia, como a beira de um acrílico */
+    border: 1px solid rgba(255, 255, 255, 0.4) !important; 
+    border-top: 1px solid rgba(255, 255, 255, 0.7) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.7) !important;
+    /* Sombra elegante que separa o formulário do fundo */
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2) !important;
+    /* Cantos super arredondados */
+    border-radius: 32px !important;
     padding: 40px !important;
-    color: #102a43;
-    box-sizing: border-box;
+    color: #102a43 !important;
+    box-sizing: border-box !important;
 }
 
-/* Labels e Textos (Corrigindo o CAPS LOCK) */
+/* Labels e Títulos - Corrigindo o CAPS LOCK brutalmente */
 .octadesk__custom-form__label, label.octadesk__custom-form__label,
-.octadesk__custom-form__label span, label.octadesk__custom-form__label span {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    color: #243b53;
-    display: block;
-    text-transform: capitalize !important; /* Força Primeira Letra de Cada Palavra Maiúscula */
-    letter-spacing: 0.3px;
+.octadesk__custom-form__label span, label.octadesk__custom-form__label span,
+.octadesk__custom-form__label div, label.octadesk__custom-form__label div {
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    margin-bottom: 12px !important;
+    color: #ffffff !important; /* Branco para destacar no vidro escuro/colorido */
+    display: inline-block !important; /* Necessário para usar ::first-letter */
+    /* Força TUDO para minúsculo primeiro, já que o Octadesk manda tudo em CAPS */
+    text-transform: lowercase !important; 
+    letter-spacing: 0.3px !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2) !important;
 }
 
-/* Ocultar asterisco vermelho e colorir marcação sutilmente */
+/* Pseudo-elemento para capitalizar a primeira letra, consertando o CAPS LOCK final */
+.octadesk__custom-form__label::first-letter, label.octadesk__custom-form__label::first-letter,
+.octadesk__custom-form__label span::first-letter, label.octadesk__custom-form__label span::first-letter {
+    text-transform: uppercase !important;
+}
+
+/* Estrela vermelha de obrigatório */
 .octadesk__custom-form__label__required {
-    color: #e74c3c !important;
-    margin-left: 2px;
-    opacity: 0.8;
+    color: #ff5c5c !important;
+    margin-left: 4px !important;
+    opacity: 1 !important;
 }
 
-/* Inputs, Textareas e Selects - Geometria arredondada (Moderno) */
+/* Inputs, Textareas e Selects - Extremamente redondos e modernos */
 .octadesk__custom-form__field, 
 input.octadesk__custom-form__field,
 select.octadesk__custom-form__field,
 textarea.octadesk__custom-form__field {
-    width: 100%;
-    padding: 14px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 16px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 15px;
-    color: #102a43;
-    background-color: rgba(255, 255, 255, 0.75);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-sizing: border-box;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
-    margin-bottom: 20px;
+    width: 100% !important;
+    padding: 16px 24px !important;
+    /* Borda sutil */
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    /* Raio da borda quase circular para combinar com a identidade Premium */
+    border-radius: 20px !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 15px !important;
+    color: #102a43 !important;
+    /* Fundo branco leitoso translúcido */
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-sizing: border-box !important;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    margin-bottom: 24px !important;
 }
 
 /* Placeholder */
 .octadesk__custom-form__field::placeholder {
-    color: #829ab1;
+    color: #829ab1 !important;
+    font-weight: 400 !important;
 }
 
-/* Efeito de Interação nos Inputs */
+/* Efeitos de Interação (Hover e Focus) */
 .octadesk__custom-form__field:hover, 
 input.octadesk__custom-form__field:hover,
 select.octadesk__custom-form__field:hover,
 textarea.octadesk__custom-form__field:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1) !important;
+    border-color: #ffffff !important;
 }
 
 .octadesk__custom-form__field:focus, 
 input.octadesk__custom-form__field:focus,
 select.octadesk__custom-form__field:focus,
 textarea.octadesk__custom-form__field:focus {
-    outline: none;
-    border-color: #1863dc;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(24, 99, 220, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.02);
+    outline: none !important;
+    border-color: #1863dc !important;
+    background-color: #ffffff !important;
+    /* Focus Ring Vibrante */
+    box-shadow: 0 0 0 4px rgba(24, 99, 220, 0.25), inset 0 2px 4px rgba(0, 0, 0, 0.02) !important;
 }
 
-/* Botão Submit Premium (Estilo Pill com Gradiente) */
+/* Estado de Erro */
+.has-error .octadesk__custom-form__field, 
+.has-error input.octadesk__custom-form__field {
+    border-color: #ff5c5c !important;
+    background-color: #fffafa !important;
+    box-shadow: 0 0 0 4px rgba(255, 92, 92, 0.15) !important;
+}
+
+/* Botão Submit Premium e "Flutuante" */
 .octadesk__custom-form__submit, 
 button.octadesk__custom-form__submit {
-    background: linear-gradient(135deg, #1863dc 0%, #0c429e 100%) !important;
+    /* Gradiente moderno e vivo */
+    background: linear-gradient(135deg, #1863dc 0%, #0d48a8 100%) !important;
     color: #ffffff !important;
-    border: none;
-    border-radius: 99px !important; /* Pill shape */
-    padding: 16px 32px !important;
-    font-size: 16px !important;
+    border: none !important;
+    border-radius: 999px !important; /* Pill total */
+    padding: 18px 40px !important;
+    font-size: 17px !important;
     font-weight: 600 !important;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-    margin-top: 24px;
-    box-shadow: 0 8px 20px rgba(24, 99, 220, 0.3) !important;
+    letter-spacing: 0.8px !important;
+    cursor: pointer !important;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important; /* Animação de mola super leve */
+    width: 100% !important;
+    margin-top: 32px !important;
+    /* Sombra colorida que levanta o botão */
+    box-shadow: 0 10px 30px rgba(24, 99, 220, 0.4) !important;
 }
 
 .octadesk__custom-form__submit:hover, 
 button.octadesk__custom-form__submit:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(24, 99, 220, 0.4) !important;
+    transform: translateY(-4px) scale(1.01) !important; /* Botão aumenta sutilmente e sobe */
+    box-shadow: 0 16px 40px rgba(24, 99, 220, 0.6) !important;
     background: linear-gradient(135deg, #1f72f2 0%, #1153c4 100%) !important;
 }
 
 .octadesk__custom-form__submit:active, 
 button.octadesk__custom-form__submit:active {
-    transform: translateY(1px);
-    box-shadow: 0 4px 12px rgba(24, 99, 220, 0.2) !important;
+    transform: translateY(2px) scale(0.98) !important; /* Clique responsivo */
+    box-shadow: 0 4px 16px rgba(24, 99, 220, 0.3) !important;
+}
+
+/* Alertas modernizados (Com efeito Glassmorphism suave) */
+.octadesk__custom-form__alert {
+    padding: 18px 24px !important;
+    border-radius: 20px !important;
+    margin-bottom: 24px !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+.octadesk__custom-form__alert--success {
+    background-color: rgba(212, 237, 218, 0.7) !important;
+    color: #155724 !important;
+    border-color: rgba(195, 230, 203, 0.5) !important;
+}
+.octadesk__custom-form__alert--warning {
+    background-color: rgba(255, 243, 205, 0.7) !important;
+    color: #856404 !important;
+    border-color: rgba(255, 238, 186, 0.5) !important;
+}
+.octadesk__custom-form__alert--danger, .octadesk__custom-form__message--error {
+    background-color: rgba(248, 215, 218, 0.7) !important;
+    color: #721c24 !important;
+    border-color: rgba(245, 198, 203, 0.5) !important;
 }

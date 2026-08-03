@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,15 @@
     <style>
         body {
             font-family: 'Outfit', sans-serif;
-            /* Fundo dinâmico e suave com as cores da marca */
-            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 50%, #bcccdc 100%);
-            background-size: 200% 200%;
-            animation: gradientMove 15s ease infinite;
+            /* Fundo Escuro Mesh Gradient Premium para realçar o Glassmorphism */
+            background-color: #0b1a2e;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(24, 99, 220, 0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(12, 66, 158, 0.5) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(27, 218, 206, 0.2) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(68, 51, 169, 0.4) 0px, transparent 50%);
+            background-size: 150% 150%;
+            animation: gradientMove 20s ease-in-out infinite alternate;
             margin: 0;
             padding: 60px 20px;
             display: flex;
@@ -22,55 +28,56 @@
         }
 
         @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
         }
 
         .page-container {
             width: 100%;
             max-width: 900px;
         }
-        
+
         .header-title {
             text-align: center;
             margin-bottom: 40px;
         }
-        
+
         .header-title h1 {
-            color: #102a43;
+            color: #ffffff;
             font-weight: 700;
-            font-size: 32px;
-            margin-bottom: 8px;
+            font-size: 34px;
+            margin-bottom: 12px;
             letter-spacing: -0.5px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
-        
+
         .header-title p {
-            color: #486581;
-            font-size: 16px;
+            color: #cdd6df;
+            font-size: 17px;
             font-weight: 400;
         }
 
         .iframe-wrapper {
-            /* Sem fundo: o vidro (glassmorphism) virá do CSS embutido no Octadesk */
             background: transparent;
             width: 100%;
-            height: 1200px; /* Ajuste conforme a altura que o form precisa */
-            border-radius: 24px;
+            height: 1250px;
+            border-radius: 32px;
             overflow: hidden;
         }
 
         iframe {
             display: block;
-            border-radius: 24px;
+            border-radius: 32px;
         }
-        
+
         @media (max-width: 768px) {
             body { padding: 30px 10px; }
-            .header-title h1 { font-size: 26px; }
+            .header-title h1 { font-size: 28px; }
         }
     </style>
 </head>
+
 <body>
     <div class="page-container">
         <div class="header-title">
@@ -79,9 +86,11 @@
         </div>
 
         <div class="iframe-wrapper">
-            <!-- Iframe fornecido pelo Octadesk (verifique se já está com o jsDelivr na string de estilo!) -->
-            <iframe width="100%" height="100%" frameborder="0" src="https://o136604-b1f.octadesk.com/custom-form/bcbf0594-e94f-4a49-9b67-46a6ad8f1051?linkStyle=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FHallexVoid%2Fdevindiana%40main%2Festilo.css"></iframe>
+            <!-- Iframe com permissão de transparência (MUITO IMPORTANTE) -->
+            <iframe width="100%" height="100%" allowtransparency="true" frameborder="0"
+                src="https://o136604-b1f.octadesk.com/custom-form/bcbf0594-e94f-4a49-9b67-46a6ad8f1051?linkStyle=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FHallexVoid%2Fdevindiana%40main%2Festilo.css"></iframe>
         </div>
     </div>
 </body>
+
 </html>
