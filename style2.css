@@ -6,26 +6,16 @@ body, html, #root, #app, .octadesk-app, main, .container-fluid, .container, .App
     background-color: transparent !important;
 }
 
-/* Customizando a barra de rolagem (Scrollbar) para tirar a barra branca feia do Windows */
+/* Customizando a barra de rolagem (Scrollbar) para retirar completamente */
 ::-webkit-scrollbar {
-    width: 8px !important;
-    background: transparent !important;
-}
-::-webkit-scrollbar-track {
-    background: transparent !important;
-}
-::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3) !important;
-    border-radius: 10px !important;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5) !important;
+    display: none !important;
+    width: 0 !important;
 }
 
 /* Glassmorphism Premium no Form Container */
 .octadesk__custom-form__container {
     font-family: 'Outfit', sans-serif !important;
-    max-width: 800px !important;
+    max-width: 1000px !important;
     margin: 0 auto !important;
     /* Reduzindo a opacidade do branco para que o vidro deixe vazar a cor do fundo da página */
     background: rgba(255, 255, 255, 0.25) !important;
@@ -209,25 +199,45 @@ div:has(> .octadesk__custom-form__label)::before {
 
 /* Injetando "Dados Pessoais" antes do 1º campo (Nome) */
 div:has(> .octadesk__custom-form__label):nth-of-type(1)::before {
-    content: '👤 Dados de Contato';
+    content: 'Dados de Contato';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23ffffff' d='M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px 24px;
+    padding-left: 36px !important;
     display: block;
     margin-top: 10px !important; /* Primeiro título tem menos margem no topo */
 }
 
 /* Injetando "Sobre a Solicitação" antes do 3º campo (Título da Solicitação) */
 div:has(> .octadesk__custom-form__label):nth-of-type(3)::before {
-    content: '📝 Sobre a Solicitação';
+    content: 'Sobre a Solicitação';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23ffffff' d='M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px 24px;
+    padding-left: 36px !important;
     display: block;
 }
 
 /* Injetando "Dados Fiscais" antes do 6º campo (Razão Social / NF) */
 div:has(> .octadesk__custom-form__label):nth-of-type(6)::before {
-    content: '🏢 Dados Fiscais da Compra';
+    content: 'Dados Fiscais da Compra';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23ffffff' d='M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-16-16H32A16,16,0,0,0,16,32V208H8a8,8,0,0,0,0,16H248a8,8,0,0,0,0-16ZM128,208H32V32h96ZM208,208H144V96h64Zm-32-88a8,8,0,0,1-8-8V96a8,8,0,0,1,16,0v16A8,8,0,0,1,176,120Zm-80,0a8,8,0,0,1-8-8V96a8,8,0,0,1,16,0v16A8,8,0,0,1,96,120Zm0,40a8,8,0,0,1-8-8V136a8,8,0,0,1,16,0v16A8,8,0,0,1,96,160Zm0,40a8,8,0,0,1-8-8V176a8,8,0,0,1,16,0v16A8,8,0,0,1,96,200ZM64,80a8,8,0,0,1-8-8V56a8,8,0,0,1,16,0V72A8,8,0,0,1,64,80Zm0,40a8,8,0,0,1-8-8V96a8,8,0,0,1,16,0v16A8,8,0,0,1,64,120Zm0,40a8,8,0,0,1-8-8V136a8,8,0,0,1,16,0v16A8,8,0,0,1,64,160Zm0,40a8,8,0,0,1-8-8V176a8,8,0,0,1,16,0v16A8,8,0,0,1,64,200Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px 24px;
+    padding-left: 36px !important;
     display: block;
 }
 
 /* Injetando "Detalhes Finais" antes do 9º campo (Escreva sua solicitação) */
 div:has(> .octadesk__custom-form__label):nth-of-type(9)::before {
-    content: '💬 Detalhes Finais';
+    content: 'Detalhes Finais';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23ffffff' d='M216,40H40A16,16,0,0,0,24,56V184a16,16,0,0,0,16,16H93.36l26,27.7a15.89,15.89,0,0,0,23.23,0l26-27.7H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM40,56H216V184H162a8,8,0,0,0-5.83,2.53l-28.18,30-28.18-30A8,8,0,0,0,94,184H40Zm120,48a8,8,0,0,1-8,8H104a8,8,0,0,1,0-16h48A8,8,0,0,1,160,104Zm0,32a8,8,0,0,1-8,8H104a8,8,0,0,1,0-16h48A8,8,0,0,1,160,136Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px 24px;
+    padding-left: 36px !important;
     display: block;
 }
