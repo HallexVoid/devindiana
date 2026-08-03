@@ -241,3 +241,24 @@ div:has(> .octadesk__custom-form__label):nth-of-type(9)::before {
     padding-left: 36px !important;
     display: block;
 }
+
+/* Forçando todos os textos (upload, descrições, links) a ficarem brancos para legibilidade */
+.octadesk__custom-form__container a,
+.octadesk__custom-form__container p,
+.octadesk__custom-form__container small,
+.octadesk__custom-form__container div,
+.octadesk__custom-form__container label,
+.octadesk__custom-form__attachment,
+.octadesk__custom-form__file-upload,
+.octadesk-app {
+    color: #ffffff !important;
+}
+
+/* Inputs, Textareas e Selects DEVEM continuar com o texto escuro, pois o fundo deles é claro */
+.octadesk__custom-form__field, 
+input.octadesk__custom-form__field,
+select.octadesk__custom-form__field,
+textarea.octadesk__custom-form__field,
+.octadesk__custom-form__field::placeholder {
+    color: #102a43 !important;
+}
