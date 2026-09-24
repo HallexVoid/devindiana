@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-/* Forçando a transparência nos elementos raiz */
-body, html, #root, #app, .octadesk-app, main, .container-fluid, .container, .App, div[data-reactroot] {
-    background: transparent !important;
-    background-color: transparent !important;
+/* Fundo Escuro Perfeito para eliminar qualquer borda/fundo branco no Iframe */
+html, body, #root, #app, .octadesk-app, main, .container-fluid, .container, .App, div[data-reactroot] {
+    background: #061020 !important;
+    background-color: #061020 !important;
     font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Ocultar barra de rolagem nativa */
@@ -13,19 +16,17 @@ body, html, #root, #app, .octadesk-app, main, .container-fluid, .container, .App
     width: 0 !important;
 }
 
-/* Container do Formulário com Contraste Robusto Garantido */
+/* Container do Formulário integrado 100% ao Card da Landing Page */
 .octadesk__custom-form__container {
     font-family: 'Outfit', sans-serif !important;
-    max-width: 980px !important;
+    width: 100% !important;
+    max-width: 1000px !important;
     margin: 0 auto !important;
-    /* Fundo escuro azul-marinho com gradiente suave */
-    background: #0d1e36 !important;
-    background: linear-gradient(180deg, #102543 0%, #0a182c 100%) !important;
-    border: 1px solid rgba(56, 189, 248, 0.35) !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.4) !important;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 40px rgba(24, 99, 220, 0.2) !important;
-    border-radius: 28px !important;
-    padding: 40px !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 24px 32px !important;
     color: #ffffff !important;
     box-sizing: border-box !important;
 }
@@ -69,7 +70,7 @@ select.octadesk__custom-form__field,
 textarea.octadesk__custom-form__field {
     width: 100% !important;
     padding: 15px 20px !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
     border-radius: 14px !important;
     font-family: 'Outfit', sans-serif !important;
     font-size: 15px !important;
@@ -77,7 +78,7 @@ textarea.octadesk__custom-form__field {
     background-color: #ffffff !important;
     transition: all 0.25s ease-in-out !important;
     box-sizing: border-box !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
     margin-bottom: 22px !important;
 }
 
@@ -201,8 +202,7 @@ div:has(> .octadesk__custom-form__label):nth-of-type(8) textarea {
 /* Responsividade Mobile */
 @media (max-width: 768px) {
     .octadesk__custom-form__container {
-        padding: 24px 16px !important;
-        border-radius: 20px !important;
+        padding: 16px 12px !important;
     }
 
     div:has(> .octadesk__custom-form__label)::before {
