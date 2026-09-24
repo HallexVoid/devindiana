@@ -4,112 +4,638 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Devoluções e Garantias | Indiana Peças</title>
+    <title>Devoluções e Garantias | Indiana Peças - Máquinas Pesadas e Empilhadeiras</title>
+    
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Portal oficial de Devoluções e Garantias da Indiana Peças. Abertura de chamados, orientações fiscais para emissão de NF e suporte técnico rápido para linha amarela e empilhadeiras.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://indianapecas.com.br/devolucoes/">
+    
+    <!-- Open Graph -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Devoluções e Garantias | Indiana Peças">
+    <meta property="og:description" content="Processo ágil, seguro e 100% digital para trocas, devoluções e garantias de peças pesadas.">
+    <meta property="og:url" content="https://indianapecas.com.br/devolucoes/">
+    <meta property="og:site_name" content="INDIANA PARTES E PEÇAS LTDA.">
+    <meta property="og:image" content="https://indianapecas.com.br/wp-content/uploads/2025/07/Group-248.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://indianapecas.com.br/wp-content/uploads/2025/07/fav.png">
+
+    <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Outfit', sans-serif;
-            /* Fundo Escuro Mesh Gradient Premium para realçar o Glassmorphism */
-            background-color: #0b1a2e;
-            background-image:
-                radial-gradient(at 0% 0%, rgba(24, 99, 220, 0.4) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(12, 66, 158, 0.5) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(27, 218, 206, 0.2) 0px, transparent 50%),
-                radial-gradient(at 0% 100%, rgba(68, 51, 169, 0.4) 0px, transparent 50%);
-            background-size: 150% 150%;
-            animation: gradientMove 20s ease-in-out infinite alternate;
-            margin: 0;
-            padding: 60px 20px;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        @keyframes gradientMove {
-            0% {
-                background-position: 0% 0%;
-            }
-
-            50% {
-                background-position: 100% 100%;
-            }
-
-            100% {
-                background-position: 0% 0%;
-            }
-        }
-
-        .page-container {
-            width: 100%;
-            max-width: 1050px;
-        }
-
-        .header-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .header-title h1 {
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 34px;
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .header-title p {
-            color: #cdd6df;
-            font-size: 17px;
-            font-weight: 400;
-        }
-
-        .iframe-wrapper {
-            background: transparent;
-            width: 100%;
-            height: 1450px;
-            /* Reduzido para não sobrar muito espaço no desktop */
-            border-radius: 32px;
-            overflow: hidden;
-        }
-
-        iframe {
-            display: block;
-            border-radius: 32px;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 20px 10px;
-            }
-
-            .header-title h1 {
-                font-size: 26px;
-            }
-
-            .iframe-wrapper {
-                height: 1700px;
-                /* Maior no mobile porque os campos ficam em uma coluna e empurram para baixo */
-            }
-        }
-    </style>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="landing.css">
 </head>
 
 <body>
-    <div class="page-container">
-        <div class="header-title">
-            <h1>Devoluções e Garantias</h1>
-            <p>Preencha o formulário abaixo para iniciar sua solicitação</p>
-        </div>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scrollProgressBar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
 
-        <div class="iframe-wrapper">
-            <!-- Iframe com permissão de transparência (MUITO IMPORTANTE) -->
-            <iframe width="100%" height="100%" allowtransparency="true" frameborder="0"
-                src="https://o136604-b1f.octadesk.com/custom-form/bcbf0594-e94f-4a49-9b67-46a6ad8f1051?linkStyle=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FHallexVoid%2Fdevindiana%40main%2Fstyle5.css"></iframe>
+    <!-- Ambient Background FX & Parallax Orbs -->
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="floating-orb orb-1" aria-hidden="true"></div>
+    <div class="floating-orb orb-2" aria-hidden="true"></div>
+    <div class="floating-orb orb-3" aria-hidden="true"></div>
+
+    <!-- Top Announcement Bar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-content">
+                <div class="topbar-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Central de Atendimento Pós-Venda & Garantia</span>
+                </div>
+                <div class="topbar-contacts">
+                    <a href="tel:+554830030694" class="topbar-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>(48) 3003-0694</span>
+                    </a>
+                    <a href="https://wa.me/5548988640238" target="_blank" rel="noopener" class="topbar-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        <span>WhatsApp: (48) 98864-0238</span>
+                    </a>
+                    <a href="mailto:sac@indianapecas.com.br" class="topbar-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>sac@indianapecas.com.br</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="https://indianapecas.com.br" class="nav-brand" title="Indiana Peças - Início">
+                    <img src="https://indianapecas.com.br/wp-content/uploads/2025/07/Group-248.png" alt="Indiana Peças Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="nav-brand-fallback" style="display:none;">INDIANA PEÇAS</span>
+                </a>
+
+                <nav>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
+                        <li><a href="#guia-fiscal" class="nav-link">Guia Fiscal (NF)</a></li>
+                        <li><a href="#garantia" class="nav-link">Garantia 90 Dias</a></li>
+                        <li><a href="#formulario" class="nav-link">Formulário</a></li>
+                        <li><a href="#faq" class="nav-link">Dúvidas Frequentes</a></li>
+                        <li><a href="#suporte" class="nav-link">Suporte</a></li>
+                    </ul>
+                </nav>
+
+                <div class="nav-actions">
+                    <a href="#formulario" class="btn btn-primary btn-sm">
+                        <span>Iniciar Solicitação</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu" aria-expanded="false">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content reveal-init">
+                        <div class="hero-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>Atendimento Oficial de Pós-Venda</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Devoluções e Garantias com <span class="highlight">Agilidade e Precisão</span> para suas <span class="yellow-line">Máquinas Pesadas</span>
+                        </h1>
+                        <p class="hero-description">
+                            Processo 100% estruturado e digital para reposição de peças de Linha Amarela e Empilhadeiras. Menos burocracia técnica, suporte fiscal completo e foco em manter sua frota em operação contínua.
+                        </p>
+
+                        <div class="hero-cta-group">
+                            <a href="#formulario" class="btn btn-primary btn-lg">
+                                <span>Preencher Formulário de Solicitação</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                            </a>
+                            <a href="#guia-fiscal" class="btn btn-secondary btn-lg">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                                <span>Instruções de Nota Fiscal</span>
+                            </a>
+                        </div>
+
+                        <div class="hero-stats">
+                            <div class="stat-card">
+                                <div class="stat-value">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span>24h a 48h</span>
+                                </div>
+                                <span class="stat-label">Triagem técnica inicial</span>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                                    <span>90 Dias</span>
+                                </div>
+                                <span class="stat-label">Garantia legal assegurada (CDC)</span>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                                    <span>Logística</span>
+                                </div>
+                                <span class="stat-label">Rastreio e orientação de envio</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual reveal-scale-init">
+                        <div class="hero-visual-card">
+                            <div class="visual-header">
+                                <div class="visual-title">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                                    <span>Checklist do Solicitante</span>
+                                </div>
+                                <span class="visual-pill">Rápido & Direto</span>
+                            </div>
+
+                            <div class="visual-items-list">
+                                <div class="visual-item">
+                                    <div class="visual-icon">01</div>
+                                    <div class="visual-item-text">
+                                        <h4>Número da Nota Fiscal (DANFE)</h4>
+                                        <p>Chave de acesso de 44 dígitos da compra efetuada na Indiana.</p>
+                                    </div>
+                                </div>
+                                <div class="visual-item">
+                                    <div class="visual-icon">02</div>
+                                    <div class="visual-item-text">
+                                        <h4>Fotos e Vídeos da Peça</h4>
+                                        <p>Imagens nítidas da embalagem, código gravado e detalhe do defeito.</p>
+                                    </div>
+                                </div>
+                                <div class="visual-item">
+                                    <div class="visual-icon">03</div>
+                                    <div class="visual-item-text">
+                                        <h4>Dados da Máquina / Aplicação</h4>
+                                        <p>Modelo, ano e número de série da máquina ou empilhadeira.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="visual-footer">
+                                <span>Suporte técnico integrado:</span>
+                                <strong>Ticket via Octadesk</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Steps Section -->
+        <section class="section" id="como-funciona">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-eyebrow">Fluxo de Atendimento</span>
+                    <h2 class="section-title">Como Funciona o Processo</h2>
+                    <p class="section-subtitle">Acompanhe as 4 etapas simples desde a abertura do chamado até a resolução final da sua solicitação.</p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="step-card reveal-init stagger-1">
+                        <div class="step-number">01</div>
+                        <h3 class="step-title">Abertura Online</h3>
+                        <p class="step-desc">Preencha o formulário nesta página informando seus dados, número da NF de origem e motivo da solicitação com fotos anexas.</p>
+                        <span class="step-tag">Tempo estimado: 3 min</span>
+                    </div>
+
+                    <div class="step-card reveal-init stagger-2">
+                        <div class="step-number">02</div>
+                        <h3 class="step-title">Triagem Técnica</h3>
+                        <p class="step-desc">Nossa equipe de engenharia e pós-venda analisa a documentação e retorna com o parecer e a autorização de postagem.</p>
+                        <span class="step-tag">Retorno em até 48h</span>
+                    </div>
+
+                    <div class="step-card reveal-init stagger-3">
+                        <div class="step-number">03</div>
+                        <h3 class="step-title">Envio da Mercadoria</h3>
+                        <p class="step-desc">Emita a Nota Fiscal de Devolução (conforme nosso Guia Fiscal abaixo) e despache o item devidamente embalado.</p>
+                        <span class="step-tag">Transportadora / Coleta</span>
+                    </div>
+
+                    <div class="step-card reveal-init stagger-4">
+                        <div class="step-number">04</div>
+                        <h3 class="step-title">Solução & Restituição</h3>
+                        <p class="step-desc">Após o recebimento e conferência física, é realizado o envio da nova peça, estorno financeiro ou disponibilização de crédito.</p>
+                        <span class="step-tag">Troca, Estorno ou Crédito</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fiscal Guide Section -->
+        <section class="section" id="guia-fiscal">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-eyebrow">Orientações Tributárias</span>
+                    <h2 class="section-title">Guia para Emissão de Nota Fiscal de Devolução</h2>
+                    <p class="section-subtitle">Para que o recebimento seja aceito sem impedimentos fiscais, emita a NF-e seguindo as regras do seu regime tributário.</p>
+                </div>
+
+                <div class="fiscal-container reveal-init">
+                    <div class="fiscal-tabs" role="tablist">
+                        <button class="fiscal-tab-btn active" data-target="tab-lucro" role="tab" aria-selected="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
+                            <span>Lucro Real / Lucro Presumido</span>
+                        </button>
+                        <button class="fiscal-tab-btn" data-target="tab-simples" role="tab" aria-selected="false">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            <span>Simples Nacional</span>
+                        </button>
+                        <button class="fiscal-tab-btn" data-target="tab-pf" role="tab" aria-selected="false">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            <span>Pessoa Física / Não Contribuinte</span>
+                        </button>
+                    </div>
+
+                    <!-- Panel 1: Lucro Real / Presumido -->
+                    <div class="fiscal-content-panel active" id="tab-lucro" role="tabpanel">
+                        <div class="fiscal-grid">
+                            <div class="fiscal-fields">
+                                <div class="fiscal-field-row">
+                                    <span class="fiscal-field-label">Natureza da Operação</span>
+                                    <span class="fiscal-field-value">
+                                        <span>Devolução de compra para comercialização / industrialização</span>
+                                        <button class="copy-btn" data-copy="Devolução de compra para comercialização">Copiar</button>
+                                    </span>
+                                </div>
+                                <div class="fiscal-field-row">
+                                    <span class="fiscal-field-label">CST (ICMS)</span>
+                                    <span class="fiscal-field-value">
+                                        <span>90 (Outras) ou idêntico à NF de origem</span>
+                                        <button class="copy-btn" data-copy="90">Copiar</button>
+                                    </span>
+                                </div>
+                                <div class="fiscal-field-row">
+                                    <span class="fiscal-field-label">CFOP Estadual / Interestadual</span>
+                                    <span class="fiscal-field-value">
+                                        <span>5.202 (Interna) / 6.202 (Interestadual)</span>
+                                        <button class="copy-btn" data-copy="6202">Copiar 6202</button>
+                                    </span>
+                                </div>
+                                <div class="fiscal-field-row">
+                                    <span class="fiscal-field-label">IPI / ICMS-ST</span>
+                                    <span class="fiscal-field-value">
+                                        <span>Destacar nos campos próprios da NF</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="fiscal-notice-box">
+                                <div class="fiscal-notice-title">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                    <span>Chave Referenciada Obrigatória</span>
+                                </div>
+                                <p class="fiscal-notice-text">
+                                    É obrigatório informar a <strong>Chave de Acesso da Nota Fiscal de Compra original</strong> no campo de Documentos Fiscais Referenciados (refNFe) para permitir a validação perante a SEFAZ.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Simples Nacional -->
+                    <div class="fiscal-content-panel" id="tab-simples" role="tabpanel">
+                        <div class="fiscal-grid">
+                            <div class="fiscal-fields">
+                                <div class="fiscal-field-row">
+                                    <span class="fiscal-field-label">Natureza da Operação</span>
+                                    <span class="fiscal-field-value">
+                                        <span>Devolução de compra para comercialização</span>
+                                        <button class="copy-btn" data-copy="Devolução de compra para comercialização">Copiar</button>
+                                    </span>
+                                </div>
+                                <div class="fiscal-field-row">
+                                    <span class="fiscal-field-label">CSOSN</span>
+                                    <span class="fiscal-field-value">
+                                        <span>900 (Outros) ou 400 (Não tributada)</span>
+                                        <button class="copy-btn" data-copy="900">Copiar</button>
+                                    </span>
+                                </div>
+                                <div class="fiscal-field-row">
+                                    <span class="fiscal-field-label">CFOP</span>
+                                    <span class="fiscal-field-value">
+                                        <span>5.202 (Interna) / 6.202 (Interestadual)</span>
+                                        <button class="copy-btn" data-copy="6202">Copiar</button>
+                                    </span>
+                                </div>
+                                <div class="fiscal-field-row">
+                                    <span class="fiscal-field-label">Dados Adicionais</span>
+                                    <span class="fiscal-field-value">
+                                        <span>Mencionar valores de ICMS/IPI da NF de origem nas Informações Complementares</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="fiscal-notice-box">
+                                <div class="fiscal-notice-title">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+                                    <span>Texto para Informações Complementares</span>
+                                </div>
+                                <p class="fiscal-notice-text">
+                                    "Devolução referente a NF-e n° [Número da NF], emitida em [Data], chave [Chave de 44 dígitos]. Valor do ICMS: R$ XX / IPI: R$ XX."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Pessoa Física / Não Contribuinte -->
+                    <div class="fiscal-content-panel" id="tab-pf" role="tabpanel">
+                        <div class="fiscal-grid">
+                            <div class="fiscal-fields">
+                                <div class="fiscal-field-row">
+                                    <span class="fiscal-field-label">Emissão de NF-e</span>
+                                    <span class="fiscal-field-value">
+                                        <span>Não é obrigatória pelo comprador</span>
+                                    </span>
+                                </div>
+                                <div class="fiscal-field-row">
+                                    <span class="fiscal-field-label">Documento Necessário</span>
+                                    <span class="fiscal-field-value">
+                                        <span>Declaração de Devolução assinada + DANFE de compra</span>
+                                    </span>
+                                </div>
+                                <div class="fiscal-field-row">
+                                    <span class="fiscal-field-label">Nota de Entrada (Indiana)</span>
+                                    <span class="fiscal-field-value">
+                                        <span>A Indiana Peças emitirá a Nota Fiscal de Entrada no recebimento</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="fiscal-notice-box">
+                                <div class="fiscal-notice-title">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                                    <span>Procedimento para Não Contribuintes</span>
+                                </div>
+                                <p class="fiscal-notice-text">
+                                    Ao preencher o formulário, informe que se trata de Pessoa Física/Não Contribuinte. Nossa equipe fornecerá o modelo padrão de declaração para anexar à caixa no envio da transportadora.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Form Section -->
+        <section class="section form-section" id="formulario">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-eyebrow">Canal Oficial de Abertura</span>
+                    <h2 class="section-title">Formulário de Devoluções e Garantias</h2>
+                    <p class="section-subtitle">Preencha os campos abaixo com as informações completas. Suas informações são transmitidas diretamente para o sistema Octadesk de atendimento da Indiana Peças.</p>
+                </div>
+
+                <div class="form-wrapper-card reveal-init">
+                    <div class="form-card-header">
+                        <div class="form-header-info">
+                            <h3>Solicitação de Atendimento Pós-Venda</h3>
+                            <p>Todos os campos com asterisco (<span style="color:#ff5c5c;">*</span>) são de preenchimento obrigatório.</p>
+                        </div>
+                        <div class="form-security-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            <span>Ambiente Seguro & Criptografado</span>
+                        </div>
+                    </div>
+
+                    <!-- Octadesk Form Embedded via Iframe -->
+                    <div class="iframe-container">
+                        <iframe 
+                            id="formIframe"
+                            title="Formulário de Devolução Indiana Peças" 
+                            width="100%" 
+                            height="100%" 
+                            allowtransparency="true" 
+                            frameborder="0"
+                            src="https://o136604-b1f.octadesk.com/custom-form/bcbf0594-e94f-4a49-9b67-46a6ad8f1051?linkStyle=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FHallexVoid%2Fdevindiana%40main%2Fstyle6.css">
+                        </iframe>
+                    </div>
+
+                    <div class="form-contingency-bar">
+                        <span>Problemas para visualizar o formulário? <a href="#" id="refreshIframe">Clique aqui para recarregar</a> ou abra diretamente no link oficial.</span>
+                        <span>Indiana Partes e Peças LTDA &bull; CNPJ 00.000.000/0000-00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warranty Coverage Section -->
+        <section class="section" id="garantia">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-eyebrow">Segurança e Transparência</span>
+                    <h2 class="section-title">Políticas de Garantia & Condições</h2>
+                    <p class="section-subtitle">Conheça as diretrizes para garantir agilidade e assertividade na análise de seus produtos.</p>
+                </div>
+
+                <div class="warranty-grid">
+                    <div class="warranty-card reveal-init stagger-1">
+                        <div class="warranty-icon-wrap">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h4>Prazo de Garantia de 90 Dias</h4>
+                        <p>Todas as peças comercializadas pela Indiana Peças contam com o prazo legal de garantia de 90 dias contra defeitos comprovados de fabricação ou funcionamento, conforme o Código de Defesa do Consumidor.</p>
+                    </div>
+
+                    <div class="warranty-card reveal-init stagger-2">
+                        <div class="warranty-icon-wrap amber">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </div>
+                        <h4>Inspeção de Avaria no Transporte</h4>
+                        <p>No momento da entrega pela transportadora, realize a conferência visual externa. Havendo qualquer avaria ou violação na caixa, faça a ressalva formal no Conhecimento de Transporte (CT-e) e nos comunique imediatamente.</p>
+                    </div>
+
+                    <div class="warranty-card reveal-init stagger-3">
+                        <div class="warranty-icon-wrap emerald">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h4>Instalação e Aplicação Correta</h4>
+                        <p>A garantia não cobre avarias decorrentes de aplicação inadequada, contaminação de fluido hidráulico, montagem incorreta sem torque recomendado ou utilização em maquinário fora das especificações do fabricante.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-eyebrow">Tire suas Dúvidas</span>
+                    <h2 class="section-title">Perguntas Frequentes (FAQ)</h2>
+                    <p class="section-subtitle">Respostas para as principais dúvidas sobre devoluções, prazos, custos e notas fiscais.</p>
+                </div>
+
+                <div class="faq-wrap reveal-init">
+                    <div class="faq-item active">
+                        <button class="faq-header" aria-expanded="true">
+                            <span>1. Quem é responsável pelos custos de frete na devolução?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-body">
+                            Em casos de peças com defeito de fabricação constatado ou erro de envio por nossa parte, o custo do frete de devolução e reenvio é integralmente coberto pela Indiana Peças através de logística reversa autorizada.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-header" aria-expanded="false">
+                            <span>2. Qual o prazo para conclusão da análise técnica do produto?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-body">
+                            A triagem dos dados enviados via formulário ocorre em até 48 horas úteis. Após o recebimento físico da peça em nossa central, a avaliação laboratorial é concluída em até 5 dias úteis, com emissão do laudo técnico conclusivo.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-header" aria-expanded="false">
+                            <span>3. Como funciona a restituição de valores ou emissão de crédito?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-body">
+                            Você pode optar pela troca imediata por nova peça, crédito para futuras compras em sua conta ou estorno financeiro (conforme a forma de pagamento original: estorno no cartão de crédito ou depósito em conta PJ cadastrada para pagamentos via boleto/PIX).
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-header" aria-expanded="false">
+                            <span>4. O que fazer se comprei o modelo ou código de peça incompatível?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-body">
+                            Caso a compra tenha sido efetuada há menos de 7 dias e a peça não apresente marcas de instalação ou uso, com embalagem original preservada, você pode solicitar a troca pelo código correto preenchendo o formulário desta página.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-header" aria-expanded="false">
+                            <span>5. Como emitir a Nota Fiscal caso minha empresa seja optante pelo Simples Nacional?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-body">
+                            Utilize o CSOSN 900 (ou 400), CFOP 5.202/6.202, e mencione nos Dados Adicionais da NF o número da nota original de venda e os valores de IPI/ICMS correspondentes para que a escrituração seja aceita sem pendências.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Direct Support Banner -->
+        <section class="section section-sm" id="suporte">
+            <div class="container">
+                <div class="support-banner reveal-scale-init">
+                    <div class="support-info">
+                        <h3>Precisa de Ajuda Imediata da Equipe Técnica?</h3>
+                        <p>Nossos especialistas em peças de Linha Amarela e Empilhadeiras estão à disposição para esclarecer qualquer dúvida sobre sua solicitação ou orientação de despacho.</p>
+                    </div>
+
+                    <div class="support-contacts-grid">
+                        <a href="https://wa.me/5548988640238" target="_blank" rel="noopener" class="support-contact-chip">
+                            <div class="contact-icon-box">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                            </div>
+                            <div class="contact-chip-info">
+                                <h5>Fale pelo WhatsApp</h5>
+                                <span>(48) 98864-0238</span>
+                            </div>
+                        </a>
+
+                        <a href="mailto:sac@indianapecas.com.br" class="support-contact-chip">
+                            <div class="contact-icon-box">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div class="contact-chip-info">
+                                <h5>E-mail do SAC</h5>
+                                <span>sac@indianapecas.com.br</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://indianapecas.com.br/wp-content/uploads/2025/07/Group-248.png" alt="Indiana Peças" height="42" onerror="this.style.display='none'">
+                    <p>Referência nacional no fornecimento de peças de reposição para máquinas pesadas, linha amarela e empilhadeiras. Qualidade, estoque a pronta entrega e atendimento técnico.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Navegação Rápida</h4>
+                    <ul class="footer-links">
+                        <li><a href="#como-funciona" class="footer-link">Como Funciona</a></li>
+                        <li><a href="#guia-fiscal" class="footer-link">Guia de Nota Fiscal</a></li>
+                        <li><a href="#garantia" class="footer-link">Políticas de Garantia</a></li>
+                        <li><a href="#formulario" class="footer-link">Preencher Formulário</a></li>
+                        <li><a href="#faq" class="footer-link">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Canais de Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+554830030694" class="footer-link">(48) 3003-0694</a></li>
+                        <li><a href="https://wa.me/5548988640238" target="_blank" rel="noopener" class="footer-link">WhatsApp: (48) 98864-0238</a></li>
+                        <li><a href="mailto:sac@indianapecas.com.br" class="footer-link">sac@indianapecas.com.br</a></li>
+                        <li><span style="color: var(--text-muted); font-size: 0.85rem;">Seg. a Sex. das 08:00 às 18:00</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Segurança & Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://indianapecas.com.br/politica-de-privacidade/" target="_blank" rel="noopener" class="footer-link">Política de Privacidade</a></li>
+                        <li><a href="https://indianapecas.com.br" target="_blank" rel="noopener" class="footer-link">Site Oficial Indiana Peças</a></li>
+                        <li><span style="color: var(--text-muted); font-size: 0.85rem;">INDIANA PARTES E PEÇAS LTDA</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Indiana Partes e Peças LTDA. Todos os direitos reservados.</span>
+                <span>Portal de Devoluções e Garantias &bull; Powered by Octadesk API & Custom Forms</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/5548988640238?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20processo%20de%20devolu%C3%A7%C3%A3o%20ou%20garantia." target="_blank" rel="noopener" class="fab-whatsapp" title="Falar com Suporte via WhatsApp" aria-label="Falar com Suporte via WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="btn-scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Toast Notice -->
+    <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Texto copiado com sucesso!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="landing.js"></script>
 </body>
 
 </html>

@@ -18,7 +18,7 @@ body, html, #root, #app, .octadesk-app, main, .container-fluid, .container, .App
     font-family: 'Outfit', sans-serif !important;
     max-width: 980px !important;
     margin: 0 auto !important;
-    /* Fundo escuro azul-marinho com leve transparência para garantir contraste perfeito em qualquer navegador */
+    /* Fundo escuro azul-marinho com gradiente suave */
     background: #0d1e36 !important;
     background: linear-gradient(180deg, #102543 0%, #0a182c 100%) !important;
     border: 1px solid rgba(56, 189, 248, 0.35) !important;
