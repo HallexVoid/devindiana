@@ -195,6 +195,7 @@ div:has(> .octadesk__custom-form__label):nth-of-type(9)::before {
 .octadesk__custom-form__attachment,
 [class*="upload-area"],
 [class*="file-upload"],
+[class*="dropzone"],
 div:has(> input[type="file"]) {
     background-color: #ffffff !important;
     border: 2px dashed #94a3b8 !important;
@@ -212,13 +213,19 @@ div:has(> input[type="file"]) {
 .octadesk__custom-form__file-upload:hover,
 .octadesk__custom-form__attachment:hover,
 [class*="upload-area"]:hover,
-[class*="file-upload"]:hover {
+[class*="file-upload"]:hover,
+[class*="dropzone"]:hover {
     border-color: #1863dc !important;
     background-color: #f0f7ff !important;
 }
 
 /* Link e Texto Principal do Upload ("Clique aqui para selecionar arquivos que deseja anexar") */
 .upload-area-component__description,
+.upload-area-component__description *,
+[class*="upload-area"] *,
+[class*="file-upload"] *,
+[class*="attachment"] *,
+[class*="dropzone"] *,
 .upload-area-component a,
 .upload-area-component span,
 .upload-area-component p,
@@ -227,28 +234,20 @@ div:has(> input[type="file"]) {
 .octadesk__custom-form__file-upload p,
 .octadesk__custom-form__file-upload label,
 .octadesk__custom-form__attachment a,
-.octadesk__custom-form__attachment span,
-[class*="upload-area"] a,
-[class*="upload-area"] span,
-[class*="upload-area"] p,
-[class*="upload-area"] label,
-[class*="file-upload"] a,
-[class*="file-upload"] span,
-[class*="file-upload"] p,
-[class*="file-upload"] label {
+.octadesk__custom-form__attachment span {
     color: #1863dc !important;
     font-size: 15px !important;
     font-weight: 700 !important;
     text-decoration: underline !important;
     cursor: pointer !important;
     line-height: 1.5 !important;
-    display: inline-block !important;
 }
 
 .upload-area-component a:hover,
 .upload-area-component__description:hover,
 [class*="upload-area"] a:hover,
-[class*="file-upload"] a:hover {
+[class*="file-upload"] a:hover,
+[class*="upload-area"] *:hover {
     color: #0b3fa9 !important;
     text-decoration: underline !important;
 }
