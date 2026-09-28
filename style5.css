@@ -177,16 +177,93 @@ div:has(> .octadesk__custom-form__label):nth-of-type(9)::before {
     display: block;
 }
 
-/* Textos gerais dentro do container */
-.octadesk__custom-form__container a,
+/* Textos gerais dentro do container (exceto links de anexo/upload) */
 .octadesk__custom-form__container p,
 .octadesk__custom-form__container small,
 .octadesk__custom-form__container div,
 .octadesk__custom-form__container label,
-.octadesk__custom-form__file-upload,
-.upload-area-component__description,
 .octadesk-app {
     color: #cbd5e1 !important;
+}
+
+/* =======================================================
+   ÁREA DE UPLOAD E ANEXOS (Alto Contraste e Legibilidade)
+   ======================================================= */
+.upload-area-component,
+.octadesk__custom-form__file-upload,
+.octadesk__custom-form__attachment,
+[class*="upload-area"],
+[class*="file-upload"],
+div:has(> input[type="file"]) {
+    background-color: #ffffff !important;
+    border: 2px dashed #94a3b8 !important;
+    border-radius: 14px !important;
+    padding: 24px 20px !important;
+    text-align: center !important;
+    transition: all 0.25s ease-in-out !important;
+    box-sizing: border-box !important;
+    margin-bottom: 22px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+    display: block !important;
+}
+
+.upload-area-component:hover,
+.octadesk__custom-form__file-upload:hover,
+.octadesk__custom-form__attachment:hover,
+[class*="upload-area"]:hover,
+[class*="file-upload"]:hover {
+    border-color: #1863dc !important;
+    background-color: #f0f7ff !important;
+}
+
+/* Link e Texto Principal do Upload ("Clique aqui para selecionar arquivos que deseja anexar") */
+.upload-area-component__description,
+.upload-area-component a,
+.upload-area-component span,
+.upload-area-component p,
+.octadesk__custom-form__file-upload a,
+.octadesk__custom-form__file-upload span,
+.octadesk__custom-form__file-upload p,
+.octadesk__custom-form__file-upload label,
+.octadesk__custom-form__attachment a,
+.octadesk__custom-form__attachment span,
+[class*="upload-area"] a,
+[class*="upload-area"] span,
+[class*="upload-area"] p,
+[class*="upload-area"] label,
+[class*="file-upload"] a,
+[class*="file-upload"] span,
+[class*="file-upload"] p,
+[class*="file-upload"] label {
+    color: #1863dc !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+    line-height: 1.5 !important;
+    display: inline-block !important;
+}
+
+.upload-area-component a:hover,
+.upload-area-component__description:hover,
+[class*="upload-area"] a:hover,
+[class*="file-upload"] a:hover {
+    color: #0b3fa9 !important;
+    text-decoration: underline !important;
+}
+
+/* Subtextos e instruções secundárias de arquivo */
+.upload-area-component small,
+[class*="upload-area"] small,
+.upload-area-component__subdescription,
+.upload-area-component__hint,
+[class*="file-upload"] small {
+    color: #475569 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    display: block !important;
+    margin-top: 8px !important;
+    text-decoration: none !important;
 }
 
 /* Textareas que devem parecer inputs normais */
