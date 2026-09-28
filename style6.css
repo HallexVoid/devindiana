@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-/* Fundo Escuro Perfeito para eliminar qualquer borda/fundo branco no Iframe */
-html, body, #root, #app, .octadesk-app, main, .container-fluid, .container, .App, div[data-reactroot] {
-    background: #061020 !important;
-    background-color: #061020 !important;
+/* Forçando 100% de fundo escuro em TODOS os nós do Octadesk */
+html, body, #root, #app, .octadesk-app, main, .container-fluid, .container, .App, div[data-reactroot], form, section, article {
+    background: #08162b !important;
+    background-color: #08162b !important;
     font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif !important;
     color: #ffffff !important;
     margin: 0 !important;
@@ -16,17 +16,17 @@ html, body, #root, #app, .octadesk-app, main, .container-fluid, .container, .App
     width: 0 !important;
 }
 
-/* Container do Formulário integrado 100% ao Card da Landing Page */
+/* Container do Formulário ocupando 100% da largura com fundo escuro sem bordas brancas */
 .octadesk__custom-form__container {
     font-family: 'Outfit', sans-serif !important;
     width: 100% !important;
-    max-width: 1000px !important;
+    max-width: 100% !important;
     margin: 0 auto !important;
-    background: transparent !important;
-    background-color: transparent !important;
+    background: #08162b !important;
+    background-color: #08162b !important;
     border: none !important;
     box-shadow: none !important;
-    padding: 24px 32px !important;
+    padding: 24px 36px !important;
     color: #ffffff !important;
     box-sizing: border-box !important;
 }

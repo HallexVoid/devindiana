@@ -1,6 +1,6 @@
 /**
  * Indiana Peças - Portal de Devoluções & Garantias
- * Design System, Parallax, & Motion Stylesheet
+ * Design System, Parallax, Motion & Centered Layout Stylesheet
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
@@ -11,7 +11,7 @@
     --color-bg-base: #081426;
     --color-bg-surface: #0f223d;
     --color-bg-surface-elevated: #152e50;
-    --color-bg-card: rgba(15, 34, 61, 0.65);
+    --color-bg-card: rgba(15, 34, 61, 0.7);
     --color-bg-glass: rgba(255, 255, 255, 0.04);
     --color-bg-glass-hover: rgba(255, 255, 255, 0.08);
 
@@ -62,6 +62,9 @@ html {
     scroll-behavior: smooth;
     color-scheme: dark;
     font-size: 16px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -69,6 +72,8 @@ body {
     background-color: var(--color-bg-deep);
     color: var(--text-primary);
     line-height: 1.6;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     position: relative;
     -webkit-font-smoothing: antialiased;
@@ -87,15 +92,21 @@ body {
     transition: width 0.1s linear;
 }
 
-/* Background Ambient Lighting & Parallax Mesh */
-.ambient-glow {
+/* Background Ambient Lighting & Parallax Mesh (Scoped to prevent horizontal overflow) */
+.ambient-fx-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     pointer-events: none;
     z-index: 0;
+}
+
+.ambient-glow {
+    position: absolute;
+    inset: 0;
     background:
         radial-gradient(circle at 10% 20%, rgba(24, 99, 220, 0.25) 0%, transparent 45%),
         radial-gradient(circle at 90% 15%, rgba(0, 210, 255, 0.18) 0%, transparent 50%),
@@ -106,13 +117,8 @@ body {
 }
 
 .ambient-grid {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 0;
+    position: absolute;
+    inset: 0;
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
@@ -127,7 +133,6 @@ body {
     border-radius: 50%;
     filter: blur(80px);
     pointer-events: none;
-    z-index: 0;
     opacity: 0.6;
     animation: orbFloat 18s ease-in-out infinite alternate;
 }
@@ -189,12 +194,13 @@ body {
 .stagger-3 { transition-delay: 0.24s; }
 .stagger-4 { transition-delay: 0.32s; }
 
-/* Layout Utilities */
+/* Layout Containers & Centering */
 .container {
     width: 100%;
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 24px;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 32px;
     position: relative;
     z-index: 1;
 }
@@ -471,9 +477,14 @@ body {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 48px;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
     align-items: center;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 640px;
 }
 
 .hero-badge {
@@ -498,9 +509,9 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+    font-size: clamp(2.4rem, 4.5vw, 3.6rem);
     font-weight: 800;
-    line-height: 1.12;
+    line-height: 1.15;
     letter-spacing: -1.2px;
     margin-bottom: 24px;
 }
@@ -518,11 +529,11 @@ body {
 }
 
 .hero-description {
-    font-size: 1.15rem;
+    font-size: 1.12rem;
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 38px;
-    max-width: 620px;
+    max-width: 600px;
 }
 
 .hero-cta-group {
@@ -547,7 +558,7 @@ body {
 }
 
 .stat-value {
-    font-size: 1.6rem;
+    font-size: 1.55rem;
     font-weight: 800;
     color: #ffffff;
     display: flex;
@@ -567,11 +578,19 @@ body {
     margin-top: 4px;
 }
 
+.hero-visual {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 /* Hero 3D Tilt Card */
 .hero-visual-card {
+    width: 100%;
+    max-width: 520px;
     position: relative;
     border-radius: 28px;
-    padding: 34px;
+    padding: 36px;
     background: linear-gradient(145deg, rgba(18, 42, 75, 0.75) 0%, rgba(9, 20, 38, 0.9) 100%);
     border: 1px solid var(--border-medium);
     box-shadow: 0 28px 70px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.2);
@@ -703,7 +722,7 @@ body {
 /* Section Headers */
 .section-header {
     text-align: center;
-    max-width: 740px;
+    max-width: 760px;
     margin: 0 auto 56px auto;
 }
 
@@ -738,6 +757,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     position: relative;
+    width: 100%;
 }
 
 .step-card {
@@ -810,6 +830,7 @@ body {
     padding: 48px;
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(24px);
+    width: 100%;
 }
 
 .fiscal-tabs {
@@ -967,6 +988,7 @@ body {
     box-shadow: 0 35px 90px rgba(0, 0, 0, 0.6), 0 0 60px rgba(24, 99, 220, 0.25);
     overflow: hidden;
     position: relative;
+    width: 100%;
 }
 
 .form-card-header {
@@ -1009,7 +1031,7 @@ body {
     width: 100%;
     min-height: 1950px;
     position: relative;
-    background: transparent;
+    background: #08162b;
     padding: 10px;
 }
 
@@ -1018,7 +1040,7 @@ body {
     height: 1950px;
     border: none;
     display: block;
-    background: transparent;
+    background: #08162b;
 }
 
 .form-contingency-bar {
@@ -1044,6 +1066,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
+    width: 100%;
 }
 
 .warranty-card {
@@ -1104,11 +1127,12 @@ body {
 
 /* FAQ Accordion */
 .faq-wrap {
-    max-width: 860px;
+    max-width: 880px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
 }
 
 .faq-item {
@@ -1186,6 +1210,7 @@ body {
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .support-banner::after {
@@ -1275,6 +1300,7 @@ body {
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 48px;
     margin-bottom: 56px;
+    width: 100%;
 }
 
 .footer-brand p {
@@ -1319,6 +1345,7 @@ body {
     flex-wrap: wrap;
     gap: 16px;
     font-size: 0.82rem;
+    width: 100%;
 }
 
 /* Floating Action Button (WhatsApp) */
@@ -1424,6 +1451,10 @@ body {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+
+    .hero-visual {
+        justify-content: center;
+    }
     
     .process-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1449,6 +1480,10 @@ body {
 @media (max-width: 768px) {
     .section {
         padding: 64px 0;
+    }
+
+    .container {
+        padding: 0 20px;
     }
 
     .topbar-content {
