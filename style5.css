@@ -172,7 +172,7 @@ div:has(> .octadesk__custom-form__label):nth-of-type(3) input {
 }
 
 /* Observação com exemplo de preenchimento do título */
-div:has(> .octadesk__custom-form__label):nth-of-type(3)::after {
+div:has(> .octadesk__custom-form__label):nth-of-type(3) .octadesk__custom-form__label::after {
     content: '💡 Padrão recomendado para o título:\A• DEVOLUÇÃO MADEIREIRA GAZINSKI LTDA- NF 21414\A• DEVOLUÇÃO - DISTRIBUIDORA DE ALIMENTOS PROGRESSO LTDA - EPP - 21200';
     white-space: pre-wrap !important;
     display: block !important;
@@ -186,7 +186,8 @@ div:has(> .octadesk__custom-form__label):nth-of-type(3)::after {
     border-left: 3px solid #38bdf8 !important;
     border-radius: 8px !important;
     padding: 10px 14px !important;
-    margin-bottom: 24px !important;
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
 }
 
