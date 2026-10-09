@@ -36,7 +36,9 @@ label.octadesk__custom-form__label,
 .octadesk__custom-form__label span,
 label.octadesk__custom-form__label span,
 .octadesk__custom-form__label div,
-label.octadesk__custom-form__label div {
+label.octadesk__custom-form__label div,
+#octadesk__custom-form__comment-description label,
+[id*="comment-description"] label {
     font-size: 15px !important;
     font-weight: 600 !important;
     margin-bottom: 10px !important;
@@ -51,7 +53,9 @@ label.octadesk__custom-form__label div {
 .octadesk__custom-form__label::first-letter,
 label.octadesk__custom-form__label::first-letter,
 .octadesk__custom-form__label span::first-letter,
-label.octadesk__custom-form__label span::first-letter {
+label.octadesk__custom-form__label span::first-letter,
+#octadesk__custom-form__comment-description label::first-letter,
+[id*="comment-description"] label::first-letter {
     text-transform: uppercase !important;
 }
 
@@ -202,6 +206,66 @@ div:has(> .octadesk__custom-form__label):nth-of-type(6)::before {
 div:has(> .octadesk__custom-form__label):nth-of-type(9)::before {
     content: '4. Detalhes & Descrição';
     display: block;
+}
+
+/* Observação: Endereço para Coleta da Peça */
+.octadesk__custom-form__endere_o_para_coleta_da_pe_a .octadesk__custom-form__label,
+[class*="endere_o_para_coleta"] .octadesk__custom-form__label,
+div:has(> .octadesk__custom-form__label):nth-of-type(9) .octadesk__custom-form__label {
+    display: block !important;
+    width: 100% !important;
+}
+
+.octadesk__custom-form__endere_o_para_coleta_da_pe_a .octadesk__custom-form__label::after,
+[class*="endere_o_para_coleta"] .octadesk__custom-form__label::after,
+div:has(> .octadesk__custom-form__label):nth-of-type(9) .octadesk__custom-form__label::after {
+    content: '📍 Observação: O campo deve conter o endereço urbano completo (Rua, Número, Bairro, CEP, Cidade e UF) para coleta da mercadoria, caso a solicitação seja procedente.';
+    white-space: pre-wrap !important;
+    display: block !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+    color: #cbd5e1 !important;
+    background: rgba(15, 23, 42, 0.7) !important;
+    border: 1px dashed rgba(56, 189, 248, 0.35) !important;
+    border-left: 3px solid #38bdf8 !important;
+    border-radius: 8px !important;
+    padding: 10px 14px !important;
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    text-transform: none !important;
+}
+
+/* Observação: Descrição da Solicitação & Anexos de Fotos */
+#octadesk__custom-form__comment-description label,
+.octadesk__custom-form__comment-description label,
+[id*="comment-description"] label {
+    display: block !important;
+    width: 100% !important;
+}
+
+#octadesk__custom-form__comment-description label::after,
+.octadesk__custom-form__comment-description label::after,
+[id*="comment-description"] label::after {
+    content: '📸 Observação: Relate detalhadamente o ocorrido com a peça e anexe fotos nítidas do produto (avarias, etiqueta e embalagem) no campo abaixo para agilizar a análise técnica.';
+    white-space: pre-wrap !important;
+    display: block !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+    color: #cbd5e1 !important;
+    background: rgba(15, 23, 42, 0.7) !important;
+    border: 1px dashed rgba(56, 189, 248, 0.35) !important;
+    border-left: 3px solid #38bdf8 !important;
+    border-radius: 8px !important;
+    padding: 10px 14px !important;
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    text-transform: none !important;
 }
 
 /* Textos gerais dentro do container (exceto links de anexo/upload) */
