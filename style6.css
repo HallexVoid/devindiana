@@ -204,22 +204,29 @@ div:has(> .octadesk__custom-form__label):nth-of-type(6)::before {
 }
 
 /* 4º Bloco: Detalhes Finais */
-div:has(> .octadesk__custom-form__label):nth-of-type(9)::before {
+.octadesk__custom-form__endere_o_para_coleta_da_pe_a::before,
+[class*="endere_o_para_coleta"]::before {
     content: '4. Detalhes & Descrição';
     display: block;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #38bdf8 !important;
+    margin: 32px 0 16px 0 !important;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.3) !important;
+    padding-bottom: 8px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
 }
 
 /* Observação: Endereço para Coleta da Peça */
 .octadesk__custom-form__endere_o_para_coleta_da_pe_a .octadesk__custom-form__label,
-[class*="endere_o_para_coleta"] .octadesk__custom-form__label,
-div:has(> .octadesk__custom-form__label):nth-of-type(9) .octadesk__custom-form__label {
+[class*="endere_o_para_coleta"] .octadesk__custom-form__label {
     display: block !important;
     width: 100% !important;
 }
 
 .octadesk__custom-form__endere_o_para_coleta_da_pe_a .octadesk__custom-form__label::after,
-[class*="endere_o_para_coleta"] .octadesk__custom-form__label::after,
-div:has(> .octadesk__custom-form__label):nth-of-type(9) .octadesk__custom-form__label::after {
+[class*="endere_o_para_coleta"] .octadesk__custom-form__label::after {
     content: '📍 Observação: O campo deve conter o endereço urbano completo (Rua, Número, Bairro, CEP, Cidade e UF) para coleta da mercadoria, caso a solicitação seja procedente.';
     white-space: pre-wrap !important;
     display: block !important;
