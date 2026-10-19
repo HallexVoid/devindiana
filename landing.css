@@ -546,8 +546,8 @@ body {
 /* Trust Stats Bar in Hero */
 .hero-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
     padding-top: 32px;
     border-top: 1px solid var(--border-subtle);
 }
@@ -558,7 +558,7 @@ body {
 }
 
 .stat-value {
-    font-size: 1.55rem;
+    font-size: 1.45rem;
     font-weight: 800;
     color: #ffffff;
     display: flex;
@@ -1066,8 +1066,8 @@ body {
 /* Warranty & Coverage Grid */
 .warranty-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
     width: 100%;
 }
 
@@ -1075,9 +1075,11 @@ body {
     background: var(--color-bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: 24px;
-    padding: 38px 30px;
+    padding: 32px 22px;
     backdrop-filter: blur(18px);
     transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
 }
 
 .warranty-card:hover {
@@ -1098,6 +1100,14 @@ body {
     color: var(--color-brand-cyan);
     margin-bottom: 24px;
     box-shadow: 0 0 20px rgba(24, 99, 220, 0.2);
+    flex-shrink: 0;
+}
+
+.warranty-icon-wrap.cyan {
+    background: rgba(6, 182, 212, 0.18);
+    border-color: rgba(56, 189, 248, 0.45);
+    color: var(--color-brand-cyan);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.22);
 }
 
 .warranty-icon-wrap.amber {
@@ -1105,6 +1115,7 @@ body {
     border-color: rgba(245, 158, 11, 0.35);
     color: var(--color-brand-amber-light);
     box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+    flex-shrink: 0;
 }
 
 .warranty-icon-wrap.emerald {
@@ -1112,19 +1123,55 @@ body {
     border-color: rgba(16, 185, 129, 0.35);
     color: var(--color-brand-emerald);
     box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+    flex-shrink: 0;
 }
 
 .warranty-card h4 {
-    font-size: 1.22rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 12px;
 }
 
 .warranty-card p {
-    font-size: 0.92rem;
+    font-size: 0.90rem;
     color: var(--text-secondary);
-    line-height: 1.68;
+    line-height: 1.62;
+}
+
+.warranty-alert-badge {
+    margin-top: 18px;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.28);
+    border-radius: 14px;
+    padding: 12px 14px;
+}
+
+.alert-badge-header {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #fbbf24;
+    font-size: 0.80rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.alert-badge-header svg {
+    flex-shrink: 0;
+}
+
+.warranty-alert-badge p {
+    font-size: 0.82rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.warranty-alert-badge strong {
+    color: #ffffff;
 }
 
 /* FAQ Accordion */
@@ -1467,7 +1514,8 @@ body {
     }
     
     .warranty-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     
     .support-banner {
@@ -1520,8 +1568,12 @@ body {
     }
 
     .hero-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
+    }
+
+    .warranty-grid {
+        grid-template-columns: 1fr;
     }
 
     .process-grid {
@@ -1551,5 +1603,11 @@ body {
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-stats {
+        grid-template-columns: 1fr;
     }
 }
